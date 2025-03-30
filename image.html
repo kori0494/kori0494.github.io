@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3a1454d26d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="img/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#others">Others</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header_text">
+            <p>Third-year Student</p>
+            <h1>I am <span>Dung</span> <br>from Hanoi, Vietnam</h1>
+        </div>
+    </div>
+</div>
+<!-- ------about------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about1">
+                <img src="img/user.JPG">
+            </div>
+            <div class="about2">
+                <h1 class="subtitle">ABOUT ME</h1>
+                <p>I love reading comics, physics, and programming. Realizing that an
+                     increasing number of students in Vietnam are passionate about physics, I applied to the Computer Science Department 
+                    in VinUni to create a website for sharing materials and basic core concepts for competitive physics.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id= "experience">
+                    <ul>
+                        <li><span>Experiences in</span><br>Some experimental project related to physics</li>
+                        <li><span>Vietnamese Physics Olympiads</span><br>1 in 20 attendees</li>
+                        <li><span>Took some programming courses</span><br>SIC, CS50</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id= "education">
+                    <ul>
+                        <li><span>2018-2022</span><br>Cau Giay Secondary School</li>
+                        <li><span>2022-2025</span><br>Nguyen Hue Highschool for the Gifted</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------achievements------ -->
+<div id="achievements">
+    <div class="container">
+        <h1 class="sub-title">My Achievements</h1>
+        <div class="a-list">
+            <div>
+                <i class="fa-solid fa-medal"></i>
+                <h2>VPhO 2024-2025 Award</h2>
+                <p>Consolation Prize in Vietnamese Physics Olympiads 2024-2025.</p>
+                <a href="https://hanoimoi.vn/ha-noi-tiep-tuc-dan-dau-ca-nuoc-trong-ky-thi-chon-hoc-sinh-gioi-quoc-gia-690877.html#:~:text=Trong%20%C4%91%C3%B3%20c%C3%B3%2018%20gi%E1%BA%A3i,v%C3%A0%2057%20gi%E1%BA%A3i%20Khuy%E1%BA%BFn%20kh%C3%ADch.&text=K%E1%BA%BFt%20qu%E1%BA%A3%20k%E1%BB%B3%20thi%20ch%E1%BB%8Dn,v%C3%A0%2055%20gi%E1%BA%A3i%20Khuy%E1%BA%BFn%20kh%C3%ADch.">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-medal"></i>
+                <h2>HNPhO 2024-2025 Award</h2>
+                <p>First Prize in Hanoi Physics Olympiads 2024-2025.</p>
+                <a href="https://hanoimoi.vn/ha-noi-cong-bo-ket-qua-xep-giai-ky-thi-chon-hoc-sinh-gioi-thanh-pho-lop-12-694067.html">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-medal"></i>
+                <h2>HNPhO 2023-2024 Award</h2>
+                <p>Second Prize in Hanoi Physics Olympiads 2023-2024.</p>
+                <a href="https://vietnamnet.vn/ha-noi-cong-bo-diem-thi-chon-hoc-sinh-gioi-lop-12-nam-hoc-2023-2024-2199056.html">Learn more</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- --------others----- -->
+
+<div id="others">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="img/work1.jpg">
+                <div class="layer">
+                    <h3>Third Price in Water Rocket School Contest 2022-2023</h3>
+                    <p>Making a water rocket for a shooting contest, writing reports about <br>total cost, mechanisms,
+                         and <br>statistical shooting distances at different angles.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img/work2.jpg">
+                <div class="layer">
+                    <h3>Third Price in Collision Experiment 2023-2024</h3>
+                    <p>Experiments about collisions between model cars on an air track, 
+                        <br>measuring mass and velocities to validate the Conservation Laws in Physics.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img/work3.jpg">
+                <div class="layer">
+                    <h3>Upgrade & Produce experimental materials for School Exhibition 2023-2024</h3>
+                    <p>Turning raw initials into upgraded experimental items to display in annual school exhibition. <br>Presentation
+                        on the mechanisms and some basic Physics principle happening underneath the hood.
+                    </p>
+                    <a href="https://chuyennguyenhue.com/recap-ngoai-khoa-to-vat-ly-ky-thuat-vat-ly-va-cuoc-song/">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------contact---- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>Email: dungpt2007@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>Phone number: 0868372403</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/dung.phamtien.18007218"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/snowy_td"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/kori0494"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.instagram.com/kobietten_10/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="img/Pham_Tien_Dung_CV_2020.docx" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">Yo! What's up?</span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kori. Made by <i class="fa-solid fa-star"></i>Pham Tien Dung<i class="fa-solid fa-star"></i></p>
+    </div>
+</div>
+<!-- -----function-prototypes--- -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+</script>
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyCX2fMzvJa6Eu30bEPAXpYMrdcG9DZ27GqwpKtk0i1SZbkZmqENyqH-ADDARabeooc/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+</body>
+</html>
