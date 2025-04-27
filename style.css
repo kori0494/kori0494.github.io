@@ -202,43 +202,86 @@ nav ul li a:hover::after{
 
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 35px;
     margin-top: 50px;
 }
+
 .work{
-    border-radius: 10px;
+    border-radius: 15px;
     position: relative;
-    overflow: scroll;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    height: 400px;
 }
+
 .work img{
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 15px;
     display: block;
-    transition: transform 0.5s;
+    object-fit: cover;
+    transition: transform 0.8s ease;
 }
 
 .layer{
     width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(62, 57, 57, 0.6), #ff004f);
-    border-radius: 10px;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.9)
+    );
     position: absolute;
     left: 0;
-    right: 0;
+    bottom: -100%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 40px;
     text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
+    transition: all 0.5s ease-in-out;
+    backdrop-filter: blur(5px);
 }
+
 .layer h3{
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 24px;
     margin-bottom: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.layer p{
+    font-size: 16px;
+    line-height: 1.6;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
+    color: #f0f0f0;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    background: #ff004f;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease 0.3s;
+}
+
+.layer a:hover{
+    background: #ff1a6b;
+    transform: translateY(20px) scale(1.1);
 }
 
 .work:hover img{
@@ -246,7 +289,14 @@ nav ul li a:hover::after{
 }
 
 .work:hover .layer{
-    height: 100%;
+    bottom: 0;
+}
+
+.work:hover .layer h3,
+.work:hover .layer p,
+.work:hover .layer a{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .btn{
